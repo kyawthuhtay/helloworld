@@ -1,0 +1,248 @@
+C:\Users\KyawThuHtay\Desktop\kjvm\kjvm\ConsoleApplication2\ConsoleApplication2\java\lang>javap -v Object.class
+Classfile /C:/Users/KyawThuHtay/Desktop/kjvm/kjvm/ConsoleApplication2/ConsoleApplication2/java/lang/Object.class
+  Last modified Mar 7, 2008; size 241 bytes
+  MD5 checksum 4123d86a857d640d8038f3c6c0b20dfe
+  Compiled from "Object.java"
+public class java.lang.Object
+  SourceFile: "Object.java"
+  minor version: 0
+  major version: 49
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = String             #11            //
+   #2 = Class              #12            //  java/lang/Object
+   #3 = Utf8               <init>
+   #4 = Utf8               ()V
+   #5 = Utf8               Code
+   #6 = Utf8               LineNumberTable
+   #7 = Utf8               toString
+   #8 = Utf8               ()Ljava/lang/String;
+   #9 = Utf8               SourceFile
+  #10 = Utf8               Object.java
+  #11 = Utf8
+  #12 = Utf8               java/lang/Object
+{
+  public java.lang.Object();
+    flags: ACC_PUBLIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: return
+      LineNumberTable:
+        line 3: 0
+
+  public java.lang.String toString();
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: ldc           #1                  // String
+         2: areturn
+      LineNumberTable:
+        line 7: 0
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\KyawThuHtay\Desktop\kjvm\kjvm\ConsoleApplication2\ConsoleApplication2>javap -v ITest.class
+Classfile /C:/Users/KyawThuHtay/Desktop/kjvm/kjvm/ConsoleApplication2/ConsoleApplication2/ITest.class
+  Last modified May 4, 2016; size 370 bytes
+  MD5 checksum 8d7d541d33ad06617cf6408b8649c735
+  Compiled from "ITest.java"
+public class ITest
+  SourceFile: "ITest.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#17         //  java/lang/Object."<init>":()V
+   #2 = String             #18            //  Yeach It WOrk
+   #3 = Methodref          #4.#19         //  ITest.Print1:(Ljava/lang/String;)V
+   #4 = Class              #20            //  ITest
+   #5 = Class              #21            //  java/lang/Object
+   #6 = Utf8               <init>
+   #7 = Utf8               ()V
+   #8 = Utf8               Code
+   #9 = Utf8               LineNumberTable
+  #10 = Utf8               Print1
+  #11 = Utf8               (Ljava/lang/String;)V
+  #12 = Utf8               toPrint
+  #13 = Utf8               add
+  #14 = Utf8               (II)I
+  #15 = Utf8               SourceFile
+  #16 = Utf8               ITest.java
+  #17 = NameAndType        #6:#7          //  "<init>":()V
+  #18 = Utf8               Yeach It WOrk
+  #19 = NameAndType        #10:#11        //  Print1:(Ljava/lang/String;)V
+  #20 = Utf8               ITest
+  #21 = Utf8               java/lang/Object
+{
+  public ITest();
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 2: 0
+
+  public native void Print1(java.lang.String);
+    flags: ACC_PUBLIC, ACC_NATIVE
+
+  public void toPrint();
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: ldc                  #2                   // String Yeach It WOrk
+         3: invokevirtual     #3                  // Method Print1:(Ljava/lang/String;)V
+         6: return
+      LineNumberTable:
+        line 7: 0
+        line 8: 6
+
+  public int add(int, int);
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=3
+         0: iload_1
+         1: iload_2
+         2: iadd
+         3: ireturn
+      LineNumberTable:
+        line 11: 0
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\KyawThuHtay\Desktop\kjvm\kjvm\ConsoleApplication2\ConsoleApplication2>javap -v HelloWorld.class
+Classfile /C:/Users/KyawThuHtay/Desktop/kjvm/kjvm/ConsoleApplication2/ConsoleApplication2/HelloWorld.class
+  Last modified May 4, 2016; size 645 bytes
+  MD5 checksum 46d8dfc29f23f6afd7fe9882271e632b
+  Compiled from "HelloWorld.java"
+class HelloWorld
+  SourceFile: "HelloWorld.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_SUPER
+Constant pool:
+   #1 = Methodref          #11.#27        //  java/lang/Object."<init>":()V
+   #2 = Class                 #28              //  ITest
+   #3 = Methodref          #2.#27         //  ITest."<init>":()V
+   #4 = Methodref          #2.#29         //  ITest.add:(II)I
+   #5 = Methodref          #10.#30        //  HelloWorld.sub:(II)I
+   #6 = Methodref          #31.#32        //  java/lang/String.valueOf:(I)Ljava/lang/String;
+   #7 = Methodref          #10.#33        //  HelloWorld.Print:(Ljava/lang/String;)V
+   #8 = Methodref          #2.#34         //  ITest.toPrint:()V
+   #9 = Fieldref              #10.#35        //  HelloWorld.ab:I
+  #10 = Class                #36              //  HelloWorld
+  #11 = Class                #37              //  java/lang/Object
+  #12 = Utf8                 ab
+  #13 = Utf8                 I
+  #14 = Utf8               <init>
+  #15 = Utf8               ()V
+  #16 = Utf8               Code
+  #17 = Utf8               LineNumberTable
+  #18 = Utf8               Print
+  #19 = Utf8               (Ljava/lang/String;)V
+  #20 = Utf8               Entry
+  #21 = Utf8               ()I
+  #22 = Utf8               sub
+  #23 = Utf8               (II)I
+  #24 = Utf8               <clinit>
+  #25 = Utf8               SourceFile
+  #26 = Utf8               HelloWorld.java
+  #27 = NameAndType        #14:#15        //  "<init>":()V
+  #28 = Utf8                       ITest
+  #29 = NameAndType        #38:#23        //  add:(II)I
+  #30 = NameAndType        #22:#23        //  sub:(II)I
+  #31 = Class                     #39              //  java/lang/String
+  #32 = NameAndType        #40:#41        //  valueOf:(I)Ljava/lang/String;
+  #33 = NameAndType        #18:#19        //  Print:(Ljava/lang/String;)V
+  #34 = NameAndType        #42:#15        //  toPrint:()V
+  #35 = NameAndType        #12:#13        //  ab:I
+  #36 = Utf8               HelloWorld
+  #37 = Utf8               java/lang/Object
+  #38 = Utf8               add
+  #39 = Utf8               java/lang/String
+  #40 = Utf8               valueOf
+  #41 = Utf8               (I)Ljava/lang/String;
+  #42 = Utf8               toPrint
+{
+  public static int ab;
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  HelloWorld();
+    flags:
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+
+  public native void Print(java.lang.String);
+    flags: ACC_PUBLIC, ACC_NATIVE
+
+  public int Entry();
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=5, args_size=1
+         0: new           #2                  // class ITest
+         3: dup
+         4: invokespecial #3                  // Method ITest."<init>":()V
+         7: astore        4
+         9: aload         4
+        11: iconst_2
+        12: bipush        9
+        14: invokevirtual #4                  // Method ITest.add:(II)I
+        17: istore_1
+        18: aload_0
+        19: iconst_4
+        20: iconst_2
+        21: invokevirtual #5                  // Method sub:(II)I
+        24: istore_2
+        25: iload_1
+        26: invokestatic  #6                  // Method java/lang/String.valueOf:(I)Ljava/lang/String;
+        29: astore_3
+        30: aload_0
+        31: aload_3
+        32: invokevirtual #7                  // Method Print:(Ljava/lang/String;)V
+        35: iload_2
+        36: invokestatic  #6                  // Method java/lang/String.valueOf:(I)Ljava/lang/String;
+        39: astore_3
+        40: aload_0
+        41: aload_3
+        42: invokevirtual #7                  // Method Print:(Ljava/lang/String;)V
+        45: aload         4
+        47: invokevirtual #8                  // Method ITest.toPrint:()V
+        50: iconst_2
+        51: ireturn
+      LineNumberTable:
+        line 9: 0
+        line 10: 9
+        line 11: 18
+        line 13: 25
+        line 15: 30
+        line 16: 35
+        line 17: 40
+        line 18: 45
+        line 19: 50
+
+  public int sub(int, int);
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=3
+         0: iload_1
+         1: iload_2
+         2: isub
+         3: ireturn
+      LineNumberTable:
+        line 23: 0
+
+  static {};
+    flags: ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: iconst_1
+         1: putstatic     #9                  // Field ab:I
+         4: return
+      LineNumberTable:
+        line 4: 0
+}
